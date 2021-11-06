@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.chef{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20rem 0;
+    margin: 0 auto;
+    @include m.bloque("../img/chef_bg.jpg");
+    &__heading,
+    &__texto{
+        color: v.$blanco;    
+        max-width: 40rem;
+    }
+    &__heading{
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    &__texto{
+        font-size: 2rem;
+    }
+    &__enlace{
+        @include m.boton(v.$primario,v.$blanco);
+        max-width: 40rem;
+    }
+}
